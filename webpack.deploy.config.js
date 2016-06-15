@@ -89,8 +89,8 @@ const config = {
 };
 
 config.addVendor('jquery', `${__dirname}/bower_components/jquery/dist/jquery.min.js`);
-config.addVendor('semantic', `${__dirname}/bower_components/semantic/dist/semantic.min.js`);
-config.addVendor('semantic.css', `${__dirname}/bower_components/semantic/dist/semantic.min.css`);
+config.addVendor('semantic', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.js`);
+config.addVendor('semantic.css', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.css`);
 config.addVendor('react', `${__dirname}/bower_components/react/react.min.js`);
 config.addVendor('react-dom', `${__dirname}/bower_components/react/react-dom.min.js`);
 config.addVendor('sia', `${__dirname}/bower_components/siajs/sia.min.js`);

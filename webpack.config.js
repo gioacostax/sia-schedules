@@ -85,7 +85,7 @@ const config = {
 };
 
 config.addVendor('jquery', `${__dirname}/bower_components/jquery/dist/jquery.min.js`);
-config.addVendor('semantic', `${__dirname}/bower_components/semantic/dist/semantic.min.js`);
-config.addVendor('semantic.css', `${__dirname}/bower_components/semantic/dist/semantic.min.css`);
+config.addVendor('semantic', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.js`);
+config.addVendor('semantic.css', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.css`);
 
 module.exports = config;
