@@ -1,0 +1,22 @@
+#pagination {
+  .credits {
+    margin-right: 5px;
+  }
+
+  .item {
+    display: inline-block;
+
+    margin: 0 1px;
+    padding: 2px;
+
+    color: $pagination-font-color;
+    line-height: 1;
+
+    cursor: pointer;
+
+    &.active, &:hover {
+      color: $pagination-font-color-active;
+      font-weight: bold;
+    }
+  }
+}

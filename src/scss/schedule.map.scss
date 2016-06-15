@@ -1,0 +1,41 @@
+#schedule-map {
+  position: relative;
+
+  margin-bottom: 10px;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  .ui.celled.table.map-table {
+    th {
+      width: 107px;
+
+      padding: 2px;
+
+      text-align: center;
+
+      &.th-hour {
+        width: 49px;
+      }
+    }
+
+    td {
+      padding: 0;
+
+      .line {
+        border-bottom: 1px solid $schedule-map-cell-line-color;
+
+      }
+
+      &.th-hour {
+        border-top: 1px solid $schedule-map-background-color;
+
+        text-align: center;
+      }
+
+      &.map-hour {
+        position: relative;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+#schedule-list {
+  position: relative;
+
+  background: $schedule-box-background-color;
+
+  border: 1px solid $schedule-list-track-scroll-color;
+  border-bottom: 0;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  &.--top-pointing::after {
+    border-top: 1px solid $header-border-color;
+    border-left: 1px solid $header-border-color;
+  }
+
+  .list {
+    height: $schedule-list-subject-height + 54;
+
+    padding: 5px 3px 1px;
+
+    white-space: nowrap;
+    vertical-align: baseline;
+
+    .sidebar.icon {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      color: $schedule-box-icon-color;
+      font-size: 20px;
+
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+}

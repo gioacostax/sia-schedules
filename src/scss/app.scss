@@ -1,0 +1,65 @@
+#app {
+  #header {
+    position: relative;
+
+    padding-top: 10px;
+    padding-bottom: 8px;
+
+    background: $header-background-color;
+    border-bottom: 1px solid $header-border-color;
+  }
+
+  #main {
+    #search, #schedule {
+      width: $main-width;
+
+      padding: 10px 10px 5px;
+
+      box-shadow: none;
+    }
+  }
+
+  #footer {
+    .container {
+      width: $main-width;
+
+      padding: 0 20px;
+
+      color: $footer-font-color;
+      font-size: 11px;
+
+      a {
+        color: $footer-font-color;
+
+        &:hover {
+          color: $footer-font-color-hover;
+        }
+
+        &:active {
+          color: $footer-font-color-active;
+        }
+      }
+
+
+      .info {
+        display: inline-block;
+      }
+
+      .contact {
+        display: inline-block;
+
+        width: 260px;
+
+        margin-left: 10px;
+
+        font-size: 13px;
+      }
+
+      .gio {
+        display: inline-block;
+
+        float: right;
+      }
+    }
+  }
+}

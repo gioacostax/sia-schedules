@@ -1,0 +1,28 @@
+#hourdetail.ui.popup.mini.inverted {
+  padding: 4px 6px;
+
+  line-height: 1;
+  font-size: 9px;
+
+  table {
+    text-align: center;
+
+    thead {
+      th {
+        padding: 4px 5px;
+
+        background-color: $popup-background-color;
+
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 4px 5px;
+
+        background-color: $popup-background-color;
+      }
+    }
+  }
+}

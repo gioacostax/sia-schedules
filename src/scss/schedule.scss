@@ -1,0 +1,32 @@
+#schedule {
+  .main-schedule {
+    display: inline-block;
+
+    width: 100%;
+  }
+
+  #open {
+    width: .1px;
+    height: .1px;
+
+    position: absolute;
+
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .item {
+    position: relative;
+
+    font-weight: bold;
+
+    &:hover {
+      background: $schedule-item-background-color-hover;
+
+      color: $schedule-item-text-color-hover;
+
+      cursor: pointer;
+    }
+  }
+}

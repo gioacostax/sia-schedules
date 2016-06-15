@@ -1,0 +1,78 @@
+.list.content .subject {
+  padding: 0;
+
+  background-color: $subject-background-color;
+
+  border: 1px solid $subject-border-color;
+  border-bottom: 0;
+
+  color: $subject-text-color;
+  font-size: 10px;
+
+  &:last-child {
+    border-bottom: 1px solid $subject-border-color;
+  }
+
+  .td {
+    display: inline-block;
+
+    padding: 0 5px;
+
+    border-right: 1px solid $list-box-border-color;
+
+    text-align: center;
+
+    &.select {
+      width: 29px;
+
+      .icon {
+        color: $subject-check-color;
+
+        &.circle, &.remove {
+          font-size: 11px;
+        }
+      }
+    }
+
+    &.code {
+      width: 70px;
+    }
+
+    &.credits {
+      width: 40px;
+    }
+
+    &.type {
+      width: 105px;
+
+      text-align: left;
+    }
+
+    &.name {
+      border: 0;
+
+      text-align: left;
+    }
+
+    &.drop {
+      width: 25px;
+
+      float: right;
+
+      border: 0;
+      border-left: 1px solid $list-box-border-color;
+    }
+
+    &.link {
+      cursor: pointer;
+
+      &:hover {
+        background: $list-box-background-color;
+
+        .icon {
+          color: $black;
+        }
+      }
+    }
+  }
+}

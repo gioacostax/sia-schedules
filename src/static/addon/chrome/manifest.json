@@ -1,0 +1,19 @@
+{
+  "name": "Prometeo UN",
+  "short_name": "Prometeo",
+  "description": "Mi Horario - Universidad Nacional",
+  "version": "1.1.1",
+  "author": "Giorgio Acosta",
+  "homepage_url": "https://github.com/siajs/prometeo",
+  "permissions": ["http://*.unal.edu.co/*", "https://*.firebaseio.com/*"],
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Prometeo UN - Organiza tu Horario"
+  },
+  "offline_enabled": false,
+  "minimum_chrome_version": "51.0.0.0",
+  "manifest_version": 2
+}

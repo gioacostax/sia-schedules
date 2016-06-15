@@ -1,0 +1,81 @@
+.schedule-list .schedule-item {
+  width: 100%;
+
+  background: $white;
+
+  border: 1px solid $list-box-border-color;
+  border-top: 0;
+
+  .td {
+    display: inline-block;
+
+    padding: 1px 5px;
+
+    border-right: 1px solid $list-box-border-color;
+
+    text-align: center;
+    font-weight: normal;
+
+    &.group {
+      width: 30px;
+    }
+
+    &.quota {
+      width: 140px;
+
+      .value {
+        display: inline-block;
+
+        width: 40px;
+
+        margin-right: 5px;
+
+        text-align: center;
+      }
+
+      .progress {
+        display: inline-block;
+
+        width: 80px;
+        height: 3px;
+
+        position: relative;
+        top: -2px;
+
+        background-color: $schedule-list-subject-group-bar-background;
+
+        .bar {
+          height: 100%;
+
+          &.red {
+            background-color: $schedule-list-subject-group-bar-red-background;
+          }
+
+          &.green {
+            background-color: $schedule-list-subject-group-bar-green-background;
+          }
+        }
+      }
+    }
+
+    &.sche {
+      &.day {
+        width: 40px;
+
+        &:hover {
+          background-color: $list-box-background-color;
+
+          font-weight: bold;
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    &.master {
+      border-right: 0;
+
+      text-align: left;
+    }
+  }
+}

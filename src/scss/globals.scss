@@ -1,0 +1,236 @@
+.--no-margin {
+  margin: 0 !important;
+}
+
+.--bold {
+  font-weight: bold !important;
+}
+
+.--no-bold {
+  font-weight: normal !important;
+}
+
+.--bottom-pointing {
+  &::after {
+    width: .57142857em;
+    height: .57142857em;
+
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    margin: .5px 0 0;
+
+    background: inherit;
+
+    content: '';
+
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+
+    z-index: 2;
+  }
+}
+
+.--top-pointing {
+
+  &::after {
+    width: .57142857em;
+    height: .57142857em;
+
+    position: absolute;
+
+    top: -1px;
+    left: 50%;
+
+    margin: 0;
+
+    background: inherit;
+
+    content: '';
+
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+
+    z-index: 2;
+  }
+}
+
+.--clearfix {
+  &::before, &::after {
+    display: table;
+
+    content: '';
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.--centered {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.--no-pointer {
+  cursor: default !important;
+}
+
+.--y-scrolling {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: $scroll-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $schedule-list-track-scroll-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $schedule-list-thumb-scroll-color;
+  }
+
+  &::-moz-scrollbar {
+    width: $scroll-width;
+  }
+
+  &::-moz-scrollbar-track {
+    background-color: $schedule-list-track-scroll-color;
+  }
+
+  &::-moz-scrollbar-thumb {
+    background-color: $schedule-list-thumb-scroll-color;
+  }
+}
+
+.--x-scrolling {
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: $scroll-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $schedule-list-track-scroll-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $schedule-list-thumb-scroll-color;
+  }
+}
+
+.--bar-loader {
+  width: 24px;
+  height: 16px;
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  margin: 0 auto;
+
+  text-align: center;
+  font-size: 10px;
+
+  transform: translateY(-50%) translateX(-50%);
+
+  > div {
+    display: inline-block;
+
+    width: 3px;
+    height: 100%;
+
+    float: left;
+
+    margin-left: 1px;
+
+    animation: delay .8s infinite ease-in-out;
+  }
+
+  .bar {
+    background-color: $bar-background-color;
+
+    &.b2 {
+      animation-delay: -.7s;
+    }
+
+    &.b3 {
+      animation-delay: -.6s;
+    }
+
+    &.b4 {
+      animation-delay: -.5s;
+    }
+
+    &.b5 {
+      animation-delay: -.4s;
+    }
+
+    &.b6 {
+      animation-delay: -.3s;
+    }
+  }
+}
+
+@keyframes delay {
+  0%, 40%, 100% {
+    transform: scaleY(.05);
+  }
+
+  20% {
+    transform: scaleY(1);
+  }
+}
+
+.ui.dimmer {
+  background: $dimmer-background-color;
+
+  .ui.small.modal {
+    width: 300px;
+
+    top: 305px;
+
+    margin-left: -150px;
+
+    border: 1px solid $dimmer-window-border-color;
+
+    box-shadow: 0 0 10px 0 $dimmer-windows-shadow;
+
+    font-size: 12px;
+
+
+    .header {
+      padding: 5px 8px;
+
+      &.error {
+        color: $red;
+      }
+    }
+
+    .content {
+      padding: 5px 8px;
+    }
+
+    .actions {
+      padding: 8px;
+
+      .button {
+        width: auto;
+
+        margin-left: 3px;
+        padding: 4px 8px;
+
+        border-radius: 0;
+
+        font-size: 11px;
+        font-weight: normal;
+
+        &.retry {
+          background-color: $red !important;
+        }
+      }
+    }
+  }
+}

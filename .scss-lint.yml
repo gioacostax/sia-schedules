@@ -1,0 +1,75 @@
+#
+# scss-lint - https://github.com/brigade/scss-lint
+#
+
+scss_files: "**/*.scss"
+
+exclude: 'bower_components/**'
+
+linters:
+  IdSelector:
+    enabled: false
+  ImportantRule:
+    enabled: false
+  NestingDepth:
+    enabled: true
+    max_depth: 6
+    ignore_parent_selectors: true
+  SelectorDepth:
+    enabled: true
+    max_depth: 6
+    ignore_parent_selectors: true
+  PropertySortOrder:
+    order:
+      - display
+      - width
+      - min-width
+      - max-width
+      - height
+      - min-height
+      - max-height
+      -
+      - position
+      - float
+      - top
+      - right
+      - bottom
+      - left
+      -
+      - margin
+      - margin-top
+      - margin-right
+      - margin-bottom
+      - margin-left
+      - padding
+      - padding-top
+      - padding-right
+      - padding-bottom
+      - padding-left
+      -
+      - background
+      - background-color
+      - border
+      - border-top
+      - border-right
+      - border-bottom
+      - border-left
+      - border-radius
+      - border-top-right-radius
+      - border-top-left-radius
+      - border-bottom-right-radius
+      - border-bottom-left-radius
+      -
+      - box-shadow
+      -
+      - color
+      - line-height
+      - text-align
+      - font-size
+      - font-weight
+      -
+    separate_groups: true
+  HexLength:
+    enabled: false
+  SingleLinePerSelector:
+    enabled: false

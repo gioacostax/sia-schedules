@@ -1,0 +1,47 @@
+@import 'measures';
+@import 'colors';
+@import 'globals';
+
+@import 'app';
+@import 'header';
+
+@import 'search';
+@import 'search.filter.type';
+@import 'search.filter.schedule';
+@import 'search.list';
+@import 'search.list.pagination';
+@import 'search.list.subject';
+@import 'search.list.subject.schedule';
+@import 'search.list.subject.schedule.item';
+@import 'search.list.subject.schedule.item.day.popup';
+
+@import 'schedule';
+@import 'schedule.map';
+@import 'schedule.map.item';
+@import 'schedule.list';
+@import 'schedule.list.subject';
+@import 'schedule.list.subject.group';
+
+body {
+  background: $primary-app-background-color;
+}
+
+.ui.menu.nav {
+  margin-bottom: 10px;
+
+  box-shadow: none;
+
+  font-size: 11px;
+
+  .header {
+    font-weight: bold;
+  }
+
+  .item {
+    padding: 10px;
+
+    .icon {
+      margin-right: 5px;
+    }
+  }
+}

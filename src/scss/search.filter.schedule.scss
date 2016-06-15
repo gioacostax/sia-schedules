@@ -1,0 +1,91 @@
+#dropdown-schedule {
+  .circle.icon {
+    margin-right: 5px;
+
+    color: $filter-schedule-flag-color;
+  }
+
+  span {
+    margin-right: 5px;
+  }
+
+  .menu {
+    width: 230px;
+
+    .item {
+      padding: 5px !important;
+
+      background: $white !important;
+
+      &:hover {
+        background: $white !important;
+      }
+    }
+  }
+
+  .ui.celled.table.s-schedule-table {
+    margin-bottom: 5px;
+
+    border-radius: 0;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    th {
+      width: 20px;
+
+      padding: 2px;
+    }
+
+    td {
+      padding: 1px;
+
+      &.hour {
+        &:hover, &.active {
+          background-color: $primary-app-color !important;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .ui.button {
+    width: 108px;
+
+    padding: 5px;
+
+    border-radius: 0;
+
+    font-size: 10px;
+
+
+    &.reset {
+      background-color: $filter-button-reset-background-color;
+
+      color: $white;
+
+      &:hover {
+        background-color: $filter-button-reset-background-color-hover;
+      }
+
+      &:active {
+        background-color: $filter-button-reset-background-color-active;
+      }
+    }
+
+    &.apply {
+      background-color: $filter-button-apply-background-color;
+
+      color: $filter-schedule-buttom-text-color;
+
+      &:hover {
+        background-color: $filter-button-apply-background-color-hover;
+      }
+
+      &:active {
+        background-color: $filter-button-apply-background-color-active;
+      }
+    }
+  }
+}

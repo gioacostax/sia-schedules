@@ -1,0 +1,190 @@
+// TYPES
+
+$primary-type-disc-background-color: #add494;
+$primary-type-disc-text-color: #35591c;
+
+$primary-type-nive-background-color: #fbca04;
+$primary-type-nive-text-color: #614e00;
+
+$primary-type-fund-background-color: #68c6ff;
+$primary-type-fund-text-color: #0c4070;
+
+$primary-type-libr-background-color: #d3c196;
+$primary-type-libr-text-color: #68582f;
+
+$primary-type-mult-background-color: #c2c2c2;
+$primary-type-mult-text-color: #595959;
+
+$primary-type-obli-background-color: #55669c;
+$primary-type-obli-text-color: #fff;
+
+$primary-type-eleg-background-color: #c39f53;
+$primary-type-eleg-text-color: #fff;
+
+// GLOBALS
+
+$primary-app-color: #2185d0;
+$primary-app-background-color: #fefefe;
+$primaty-grey1-background-color: #eee;
+$black: #000;
+$white: #fff;
+$red: #ff0000;
+
+$transparent: rgba(255, 255, 255, 0);
+
+// DIMMERS
+
+$dimmer-background-color: rgba(0, 0, 0, .1);
+$dimmer-window-border-color: #ccc;
+$dimmer-windows-shadow: rgba(0, 0, 0, .2);
+
+// HEADER
+
+$header-background-color: #f5f5f5;
+$header-border-color: #e5e5e5;
+
+$header-plan-background-color: #ddd;
+$header-plan-font-color: #555;
+$header-plan-active-background-color: #00c181;
+$header-plan-active-background-color-hover: #d0d0d0;
+$header-plan-active-background-color-active: #0e9266;
+$header-plan-active-font-color: #fff;
+
+$header-site-background-color: #ffd600;
+$header-site-background-color-hover: #f3cc02;
+$header-site-font-color: #000;
+
+$header-level-pre-background-color: #015ecb;
+$header-level-pre-font-color: #fff;
+$header-level-pos-background-color: #d93049;
+$header-level-pos-font-color: #fff;
+
+$header-title-background-color: #00a1d4;
+$header-title-font-color: #fff;
+
+$header-reset-background-color: #8f75b9;
+$header-reset-background-color-hover: #7d58b9;
+
+
+// FOOTER
+
+$footer-font-color: #aaa;
+$footer-font-color-hover: #666;
+$footer-font-color-active: #444;
+
+// --bar-loader
+
+$bar-background-color: #ccc;
+
+// POPUP
+
+$popup-background-color: #1b1c1d;
+
+// SCHEDULE
+
+$schedule-background-color: #eee;
+
+$schedule-item-background-color: #fff;
+$schedule-item-background-color-hover: #f0f0f0;
+$schedule-item-border-color: #d1d1d1;
+$schedule-item-text-color: #444;
+
+$schedule-head-background-color: #f3f4f5;
+$schedule-head-border-color: #d1d1d1;
+$schedule-item-background-color-hover: rgba(0, 0, 0, .03);
+$schedule-item-text-color-hover: rgba(0, 0, 0, .95);
+
+// SUBJECT
+
+$subject-background-color: #fff;
+$subject-border-color: #d1d1d1;
+$subject-text-color: #636363;
+
+$subject-label-border-color: #d4d4d5;
+
+$subject-label-cod-background-color: #e4e4e4;
+$subject-label-cod-text-color: #3c3c3c;
+
+$subject-label-cred-background-color: #406b6f;
+$subject-label-cred-text-color: #fff;
+
+$subject-check-color: #aaa;
+
+// LIST
+
+$list-text-color: #b9babb;
+$list-text-color-hover: #6d6d6d;
+$list-header-background-color: #f5f5f5;
+$list-header-font-color: #444;
+$list-box-background-color: #fbfbfb;
+$list-box-border-color: #ddd;
+$list-box-icon-color: #e8e8e8;
+
+// pagination
+
+$pagination-font-color: #888;
+$pagination-font-color-active: #444;
+
+// FILTER
+
+$filter-schedule-buttom-text-color: #fff;
+$filter-schedule-buttom-background-color-hover: #006ec1;
+$filter-schedule-flag-color: #aaa;
+
+$filter-button-reset-background-color: #aaa;
+$filter-button-reset-background-color-hover: #999;
+$filter-button-reset-background-color-active: #888;
+
+$filter-button-apply-background-color: #00cb33;
+$filter-button-apply-background-color-hover: #07a42f;
+$filter-button-apply-background-color-active: #058625;
+
+// map
+
+$schedule-map-background-color: #fff;
+$schedule-map-cell-line-color: #dedede;
+
+$schedule-map-item-background-color: #f5f5f5;
+$schedule-map-item-background-color-hover: #eee;
+$schedule-map-item-shadow-color: rgba(0, 0, 0, .18);
+
+$schedule-map-item-st2-background-color: #fdadad;
+$schedule-map-item-st2-bar-color: #d03e3e;
+$schedule-map-item-st2-font-color: #ff0000;
+$schedule-map-item-st2-border-color: #f93a3a;
+$schedule-map-item-st2-shadow-color: rgba(208, 62, 62, .45);
+
+$schedule-map-item-st2b-bar-color: #888;
+
+$schedule-map-item-st3-background-color: #929292;
+$schedule-map-item-st3-border-color: #929292;
+
+$schedule-map-item-detail-font-color: #4c4c4c;
+$schedule-map-item-detail-border-color: #bbb;
+$schedule-map-item-detail-place-font-color: #6b6b6b;
+
+// selected list
+
+$schedule-list-subject-group-background-color: #f7f7f7;
+$schedule-list-subject-group-bar-background: #bbb;
+$schedule-list-subject-group-bar-red-background: #dd4e4e;
+$schedule-list-subject-group-bar-green-background: #4da910;
+
+$schedule-list-track-scroll-color: rgba(221, 221, 221, .8);
+$schedule-list-thumb-scroll-color: #888;
+
+// selected subjects
+$schedule-box-background-color: #f1f1f1;
+$schedule-box-icon-color: #e0e0e0;
+
+$schedule-list-subject-groups-background-color: #ececec;
+$schedule-list-subject-groups-track-scroll-color: #adadad;
+$schedule-list-subject-groups-st1-background-color: #fff;
+
+$schedule-list-subject-font-color: #4c4c4c;
+$schedule-list-subject-label-shadow-color: rgba(0, 0, 0, .12);
+$schedule-list-subject-label-code-background-color: #ddd;
+$schedule-list-subject-label-code-font-color: #444;
+$schedule-list-subject-remove-background-color: #f12727;
+$schedule-list-subject-remove-font-color: #fff;
+$schedule-list-subject-remove-background-color-active: #b71717;

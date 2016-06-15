@@ -1,0 +1,5 @@
+# Ignore built files
+build/
+# Ignore libs files
+node_modules/
+bower_components/

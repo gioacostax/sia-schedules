@@ -1,0 +1,155 @@
+#header {
+  &.--bottom-pointing::after {
+    border-right: 1px solid $header-border-color;
+    border-bottom: 1px solid $header-border-color;
+  }
+
+  .container {
+    width: $main-width;
+
+    padding: 0 10px;
+
+    .nav-title {
+      float: left;
+
+      margin-top: 2px;
+      margin-left: 5px;
+
+      font-size: 20px;
+    }
+
+    .nav-site {
+      float: right;
+    }
+
+    #site {
+      .menu {
+        left: -8px;
+
+        z-index: 150;
+      }
+    }
+
+    #plan {
+      margin-top: 1px;
+
+      .menu {
+        left: -30px;
+
+        z-index: 150;
+
+        .input {
+          margin: 0;
+
+          input {
+            padding: .7em 1em;
+
+            border: 0;
+          }
+        }
+      }
+
+      .scrolling.menu {
+        .item {
+          width: 230px;
+
+          padding: 6px !important;
+
+          font-size: 10px;
+        }
+      }
+    }
+
+    .lbl {
+      display: inline-block;
+
+      margin-right: 3px;
+      padding: 5px;
+
+      line-height: 1;
+      text-align: center;
+      font-size: 10px;
+      font-weight: bold;
+
+      transform: skew(-10deg);
+      transition: all .3s ease;
+
+      &.plan {
+        width: 180px;
+
+        background: $header-plan-background-color;
+
+        color: $header-plan-font-color;
+
+        &:hover {
+          background: $header-plan-active-background-color-hover;
+        }
+
+        &.active {
+          background: $header-plan-active-background-color;
+
+          color: $header-plan-active-font-color;
+
+          &:hover {
+            background: $header-plan-active-background-color-active;
+          }
+        }
+      }
+
+      &.site {
+        width: 80px;
+
+        background: $header-site-background-color;
+
+        color: $header-site-font-color;
+
+        &:hover {
+          background: $header-site-background-color-hover;
+        }
+      }
+
+      &.level {
+        width: 40px;
+
+        &.pre {
+          background: $header-level-pre-background-color;
+
+          color: $header-level-pre-font-color;
+        }
+
+        &.pos {
+          background: $header-level-pos-background-color;
+
+          color: $header-level-pos-font-color;
+        }
+      }
+
+      &.reset-local {
+        width: 30px;
+
+        background: $header-reset-background-color;
+
+        color: $white;
+
+        &:hover {
+          background: $header-reset-background-color-hover;
+        }
+      }
+
+      &.title {
+        width: 100px;
+
+        background: $header-title-background-color;
+
+        color: $header-title-font-color;
+      }
+
+      label {
+        display: block;
+
+        transform: skew(10deg);
+        cursor: pointer;
+      }
+    }
+  }
+}
