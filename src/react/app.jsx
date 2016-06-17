@@ -104,8 +104,8 @@ export default class App extends React.Component {
               <a href="#">{'Prometeo UN v1.1.1'}</a>
             </div>
             <div className="contact">
-              <a href="https://github.com/siajs/prometeo"><i className="github icon"></i></a>
-              <a href="https://github.com/siajs/prometeo/issues"><i className="bug icon"></i></a>
+              <a href="https://github.com/siajs/prometeo" target="_blank"><i className="github icon"></i></a>
+              <a href="https://github.com/siajs/prometeo/issues" target="_blank"><i className="bug icon"></i></a>
             </div>
             <div className="gio">
               <span>
