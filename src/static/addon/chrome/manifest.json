@@ -2,7 +2,7 @@
   "name": "Prometeo UN",
   "short_name": "Prometeo",
   "description": "Mi Horario - Universidad Nacional",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Giorgio Acosta",
   "homepage_url": "https://github.com/siajs/prometeo",
   "permissions": ["http://*.unal.edu.co/*", "https://*.firebaseio.com/*"],

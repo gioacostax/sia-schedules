@@ -101,11 +101,15 @@ export default class App extends React.Component {
         <div id="footer">
           <div className="container --centered">
             <div className="info">
-              <a href="#">{'Prometeo UN v1.1.1'}</a>
+              <a href="#">{'Prometeo UN v1.1.2'}</a>
             </div>
             <div className="contact">
-              <a href="https://github.com/siajs/prometeo" target="_blank"><i className="github icon"></i></a>
-              <a href="https://github.com/siajs/prometeo/issues" target="_blank"><i className="bug icon"></i></a>
+              <a href="https://github.com/siajs/prometeo" target="_blank">
+                <i className="github icon"></i>
+              </a>
+              <a href="https://github.com/siajs/prometeo/issues" target="_blank">
+                <i className="bug icon"></i>
+              </a>
             </div>
             <div className="gio">
               <span>
