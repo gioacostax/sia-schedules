@@ -68,7 +68,7 @@ export default class ListSubject extends React.Component {
         </div>
         <div className="td code">{this.props.values.id}</div>
         <div className="td credits">{this.props.values.credits}</div>
-        <div className="td name">{utils.add3Dots(this.props.values.name, 90)}</div>
+        <div className="td name">{utils.add3Dots(this.props.values.name, 86)}</div>
         <div className="td drop link" onClick={this.showSchedule}>
           <i className={`${this.state.showSchedule ? 'caret up' : 'caret down'} icon --no-margin`}>
           </i>
