@@ -90,7 +90,13 @@ export default class FilterHour extends React.Component {
     }
 
     return (
-      <div id="dropdown-schedule" className="ui dropdown icon item">
+      <div
+        id="dropdown-schedule"
+        className="ui dropdown icon item"
+        data-content="Filtrar por Hora"
+        data-variation="mini inverted"
+        data-position="top center"
+      >
         <i className={`circle icon ${this.props.hour.length ? 'green' : ''}`}></i>
         <span className="--bold">{'HORAS'}</span>
         <div className="menu">

@@ -29,7 +29,13 @@ export default class FilterType extends React.Component {
 
   render = () => {
     return (
-      <div id="dropdown-type" className="ui dropdown icon item">
+      <div
+        id="dropdown-type"
+        className="ui dropdown icon item"
+        data-content="Filtrar por Tipología"
+        data-variation="mini inverted"
+        data-position="top center"
+      >
         <i className="circle icon" style={utils.getColorType(this.props.type)}></i>
         <span className="--bold">{sia.TYPE[this.props.type] || 'TIPOLOGÍA (TODOS)'}</span>
         <div className="menu">

@@ -22,5 +22,5 @@ export default props => {
         );
       })
     }
-    </div> : <div className="list --x-scrolling"><i className="sidebar icon"></i></div>;
+  </div> : <div className="list --x-scrolling"><i className="sidebar icon"></i></div>;
 };

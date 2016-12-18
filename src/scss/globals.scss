@@ -10,6 +10,15 @@
   font-weight: normal !important;
 }
 
+.--dark {
+  filter: brightness(25%);
+  transition: .3s filter linear;
+}
+
+.--hidden {
+  display: none !important;
+}
+
 .--bottom-pointing {
   &::after {
     width: .57142857em;
@@ -91,15 +100,15 @@
     background-color: $schedule-list-thumb-scroll-color;
   }
 
-  &::-moz-scrollbar {
+  &:-moz-scrollbar {
     width: $scroll-width;
   }
 
-  &::-moz-scrollbar-track {
+  &:-moz-scrollbar-track {
     background-color: $schedule-list-track-scroll-color;
   }
 
-  &::-moz-scrollbar-thumb {
+  &:-moz-scrollbar-thumb {
     background-color: $schedule-list-thumb-scroll-color;
   }
 }
@@ -231,6 +240,20 @@
           background-color: $red !important;
         }
       }
+    }
+  }
+}
+
+#popup-help {
+  .ui.popup {
+    padding: 5px 10px;
+
+    background-color: $popup-help;
+
+    font-size: 11px;
+
+    &::before {
+      background-color: $popup-help;
     }
   }
 }

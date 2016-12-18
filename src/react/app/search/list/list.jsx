@@ -8,6 +8,26 @@ import ListSubject from './subject.jsx';
 /* Component */
 export default class SearchList extends React.Component {
 
+  componentDidMount = () => {
+    document.getElementById('resize').addEventListener('mousedown', e => {
+      const list = document.getElementById('list-content');
+      const startY = e.clientY;
+      const startHeight = parseInt(document.defaultView.getComputedStyle(list).height, 10);
+
+      const doDrag = e2 => {
+        list.style.height = `${startHeight + e2.clientY - startY}px`;
+      };
+
+      const stopDrag = () => {
+        document.documentElement.removeEventListener('mousemove', doDrag, false);
+        document.documentElement.removeEventListener('mouseup', stopDrag, false);
+      };
+
+      document.documentElement.addEventListener('mousemove', doDrag, false);
+      document.documentElement.addEventListener('mouseup', stopDrag, false);
+    }, false);
+  }
+
   setPag = pag => {
     this.props.search(null, null, pag);
   }
@@ -28,7 +48,7 @@ export default class SearchList extends React.Component {
         </div>
         {
           this.props.loading ?
-            <div className="list content">
+            <div id="list-content" className="list content">
               <div className="--bar-loader">
                 <div className="bar b1"></div>
                 <div className="bar b2"></div>
@@ -39,7 +59,7 @@ export default class SearchList extends React.Component {
               </div>
             </div> :
               this.props.subjects.data && count ?
-                <div className="list content --y-scrolling">
+                <div id="list-content" className="list content --y-scrolling">
                 {
                   this.props.isListSelected ?
                     Object.keys(this.props.subjects.data.list).map(code => {
@@ -55,8 +75,11 @@ export default class SearchList extends React.Component {
                     })
                 }
                 </div> :
-                <div className="list content"><i className="sidebar icon"></i></div>
+                <div id="list-content" className="list content">
+                  <i className="sidebar icon"></i>
+                </div>
         }
+        <div id="resize-bar"><span id="resize">...</span></div>
         <div className="list footer">
           <div className="count">
             <i className="rocket icon"></i>

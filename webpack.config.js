@@ -22,7 +22,8 @@ const config = {
     vendors: [
       'jquery',
       'semantic',
-      'semantic.css'
+      'semantic.css',
+      'canvas'
     ]
   },
 
@@ -87,5 +88,6 @@ const config = {
 config.addVendor('jquery', `${__dirname}/bower_components/jquery/dist/jquery.min.js`);
 config.addVendor('semantic', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.js`);
 config.addVendor('semantic.css', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.css`);
+config.addVendor('canvas', `${__dirname}/bower_components/html2canvas/build/html2canvas.min.js`);
 
 module.exports = config;

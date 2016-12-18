@@ -20,6 +20,7 @@ browserSync({
     ]
   },
 
+  open: false,
   files: [
     'src/static/html/**/*.html'
   ]

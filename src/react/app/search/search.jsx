@@ -30,6 +30,17 @@ export default class Search extends React.Component {
     loading: false
   }
 
+  componentDidMount = () => {
+    $('.item').popup({
+      context: '#popup-help',
+      exclusive: true,
+      duration: 150,
+      delay: {
+        show: 250
+      }
+    });
+  }
+
   componentWillReceiveProps = props => {
     if (props.search.filters !== this.props.search.filters) {
       this.search();
@@ -37,15 +48,17 @@ export default class Search extends React.Component {
   }
 
   viewSchedule = () => {
-    if (Object.keys(this.props.schedule.selected).length || this.props.search.isListSelected) {
-      this.props.toggleView('schedule');
-    }
+    // if (Object.keys(this.props.schedule.selected).length || this.props.search.isListSelected) {
+    //   this.props.toggleView('schedule');
+    // }
+    this.props.toggleView('schedule');
   }
 
   viewSelects = () => {
-    if (Object.keys(this.props.schedule.selected).length || this.props.search.isListSelected) {
-      this.props.actions.toggleSelList(!this.props.search.isListSelected);
-    }
+    // if (Object.keys(this.props.schedule.selected).length || this.props.search.isListSelected) {
+    //   this.props.actions.toggleSelList(!this.props.search.isListSelected);
+    // }
+    this.props.actions.toggleSelList(!this.props.search.isListSelected);
   }
 
   handleInput = event => {
@@ -82,29 +95,39 @@ export default class Search extends React.Component {
       <div className="main-search">
         <div id="fetch-modal-search" className="ui small modal">
           <div className="header error">
-            {'ERROR'}
+            <i className="frown icon"></i>{'ERROR'}
           </div>
           <div className="content">
-            <p>{'Hubo un error en la búsqueda...'}</p>
+            <p>{'Se produjo un error en la búsqueda...'}</p>
           </div>
           <div className="actions">
             <div className="ui positive button">{'CONTINUAR'}</div>
           </div>
         </div>
         <div id="search-nav" className="ui pointing menu nav">
-          <div className="header active item"><i className="search icon"></i>{'BUSCADOR'}</div>
+          <div className="header active item --no-pointer">
+            <i className="search icon"></i>{'BUSCADOR'}
+          </div>
           <a
-            className={`item ${!countSelected && !isListSelected ? 'disabled' : ''}`}
+            className={'item'}
+            // className={`item ${!countSelected && !isListSelected ? 'disabled' : ''}`}
             onClick={this.viewSelects}
+            data-content="Asignaturas seleccionadas"
+            data-variation="mini inverted"
+            data-position="top center"
           >
             <i className={`check circle icon ${isListSelected ? 'green' : ''}`}></i>
             <span className={countSelected ? '--bold' : ''}>{countSelected}</span>
           </a>
           <a
-            className={`item schedule ${!countSelected && !isListSelected ? 'disabled' : ''}`}
+            className={'item schedule'}
+            // className={`item schedule ${!countSelected && !isListSelected ? 'disabled' : ''}`}
             onClick={this.viewSchedule}
+            data-content="Organizar horario"
+            data-variation="mini inverted"
+            data-position="top center"
           >
-            <i className="calendar icon --no-margin"></i>
+            <i className="calendar icon"></i>{'HORARIO'}
           </a>
           <div className="right menu">
             <FilterType
@@ -130,16 +153,14 @@ export default class Search extends React.Component {
             <SearchList
               isListSelected={isListSelected}
               loading={false}
-              subjects={
-                {
-                  data: {
-                    list: this.props.schedule.selected,
-                    countSelected,
-                    pags: null,
-                    aPag: null
-                  }
+              subjects={{
+                data: {
+                  list: this.props.schedule.selected,
+                  countSelected,
+                  pags: null,
+                  aPag: null
                 }
-              }
+              }}
               onSearch={this.handleSearch}
             /> :
             <SearchList

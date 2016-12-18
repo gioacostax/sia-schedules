@@ -63,6 +63,7 @@ export default class App extends React.Component {
   render = () => {
     return (
       <div>
+        <div id="popup-help"></div>
         <div id="fetch-modal-info" className="ui small modal">
           <div className="header error">
             {'ERROR'}
@@ -76,8 +77,8 @@ export default class App extends React.Component {
         </div>
         <div id="header" className="--bottom-pointing">
           <div className="container --clearfix --centered">
-            <div className="nav-title">
-              <i className="student icon"></i><span>{'Prometeo UN'}</span>
+            <div id="logo-name" className="nav-title">
+              <i id="logo" className="hand rock icon"></i><span>{'Prometeo UN'}</span>
             </div>
             <Header info={this.props.info.data} />
           </div>
@@ -101,7 +102,7 @@ export default class App extends React.Component {
         <div id="footer">
           <div className="container --centered">
             <div className="info">
-              <a href="#">{'Prometeo UN v1.1.2'}</a>
+              <a href="https://chrome.google.com/webstore/detail/prometeo-un/bifnfmlgdgmfajhgihjoaedfampmcgee">{'Prometeo UN v2.0.0'}</a>
             </div>
             <div className="contact">
               <a href="https://github.com/siajs/prometeo" target="_blank">
@@ -113,8 +114,11 @@ export default class App extends React.Component {
             </div>
             <div className="gio">
               <span>
+                {'Giorgio Acosta '}
                 <i className="red code icon --bold"></i>
-                <a href="mailto:giacostaj@unal.edu.co">{'Giorgio Acosta'}</a>
+                <a href="mailto:giacostaj@unal.edu.co">
+                  {' giacostaj@unal.edu.co'}
+                </a>
               </span>
             </div>
           </div>

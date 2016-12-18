@@ -127,6 +127,7 @@ export default class ScheduleSubject extends React.Component {
       this.props.actions.saveLocalStore();
     } else {
       this.props.actions.resetStateTo(this.props.values.code, 0);
+      this.props.actions.saveLocalStore();
     }
   }
 

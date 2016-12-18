@@ -75,6 +75,7 @@
 
   .list.content {
     height: $list-height;
+    min-height: 351px;
 
     position: relative;
 
@@ -111,6 +112,27 @@
       float: right;
 
       padding: 3px 8px;
+    }
+  }
+
+  #resize-bar {
+    height: 7px;
+
+    background-color: $list-box-border-color;
+
+    text-align: center;
+
+    #resize {
+      position: relative;
+      top: -10px;
+
+      color: $footer-font-color;
+
+      user-select: none;
+
+      &:hover {
+        cursor: s-resize;
+      }
     }
   }
 }

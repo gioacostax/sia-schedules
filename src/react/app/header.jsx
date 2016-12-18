@@ -44,8 +44,12 @@ export default class Header extends React.Component {
       }
     });
     $('#reset').popup({
-      position: 'top center',
-      content: 'BORRAR TODO'
+      context: '#popup-help',
+      exclusive: true,
+      duration: 150,
+      delay: {
+        show: 250
+      }
     });
   }
 
@@ -109,9 +113,22 @@ export default class Header extends React.Component {
     }
   }
 
-  handleSaveLocal = () => {
-    this.props.actions.resetSchedule();
-    this.props.actions.saveLocalStore();
+  handleReset = () => {
+    if (Object.keys(this.props.schedule.selected).length) {
+      $('#change-modal-header').modal({
+        closable: false,
+
+        onApprove: () => {
+          this.props.actions.resetSearch();
+          this.props.actions.resetSchedule();
+          this.props.actions.saveLocalStore();
+        }
+      }).modal('show');
+    } else {
+      this.props.actions.resetSearch();
+      this.props.actions.resetSchedule();
+      this.props.actions.saveLocalStore();
+    }
   }
 
   render = () => {
@@ -146,14 +163,14 @@ export default class Header extends React.Component {
       <div className="nav-site">
         <div id="change-modal-header" className="ui small modal">
           <div className="header">
-            {'ADVERTENCIA'}
+            <i className="bomb icon"></i>{'ADVERTENCIA'}
           </div>
           <div className="content">
             <p>{'Se borrará el horario actual.'}</p>
           </div>
           <div className="actions">
             <div className="ui grey cancel button">{'VOLVER'}</div>
-            <div className="ui positive button">{'CAMBIAR'}</div>
+            <div className="ui positive button">{'BORRAR'}</div>
           </div>
         </div>
         <div id="site" className="ui top pointing dropdown">
@@ -247,8 +264,10 @@ export default class Header extends React.Component {
         <div
           id="reset"
           className="lbl reset-local "
-          onClick={this.handleSaveLocal}
-          data-variation="mini inverted transition hidden"
+          onClick={this.handleReset}
+          data-content="Comenzar de nuevo"
+          data-variation="mini inverted"
+          data-position="bottom center"
         >
           <label><i className="erase icon --no-margin"></i></label>
         </div>

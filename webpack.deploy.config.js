@@ -27,7 +27,8 @@ const config = {
       'semantic.css',
       'react',
       'react-dom',
-      'sia'
+      'sia',
+      'canvas'
     ]
   },
 
@@ -94,5 +95,6 @@ config.addVendor('semantic.css', `${__dirname}/bower_components/semantic-ui/dist
 config.addVendor('react', `${__dirname}/bower_components/react/react.min.js`);
 config.addVendor('react-dom', `${__dirname}/bower_components/react/react-dom.min.js`);
 config.addVendor('sia', `${__dirname}/bower_components/siajs/sia.min.js`);
+config.addVendor('canvas', `${__dirname}/bower_components/html2canvas/build/html2canvas.min.js`);
 
 module.exports = config;
