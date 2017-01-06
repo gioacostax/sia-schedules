@@ -124,6 +124,7 @@ export default class ScheduleSubject extends React.Component {
         name: this.props.values.name,
         group: this.state.groups[this.getIndexGroup(code)]
       }]);
+      this.props.actions.checkShow(this.props.values.code, this.state.groups);
       this.props.actions.saveLocalStore();
     } else {
       this.props.actions.resetStateTo(this.props.values.code, 0);
