@@ -34,7 +34,7 @@
     "redux-storage-engine-localstorage": "^1.1.0",
     "redux-thunk": "^2.0.1",
     "sass-loader": "^4.0.0",
-    "siajs": "^2.0.3",
+    "siajs": "^2.1.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.10",
