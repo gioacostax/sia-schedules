@@ -1,6 +1,6 @@
 {
   "name": "Prometeo",
-  "version": "2.0.1",
+  "version": "2.1.0-beta.1",
   "description": "Organizador de horarios.",
   "main": "server.js",
   "author": "Giorgio Acosta <giioaj@gmail.com>",
@@ -34,7 +34,7 @@
     "redux-storage-engine-localstorage": "^1.1.0",
     "redux-thunk": "^2.0.1",
     "sass-loader": "^4.0.0",
-    "siajs": "^1.0.0",
+    "siajs": "^2.0.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.10",
@@ -51,6 +51,7 @@
     "react-hot-loader": "^1.3.0",
     "redux-devtools": "^3.2.0",
     "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-inspector": "^0.7.1"
+    "redux-devtools-inspector": "^0.7.1",
+    "uglify-js": "github:mishoo/UglifyJS2#harmony"
   }
 }

@@ -60,7 +60,11 @@ function fetchSubjects(search, noRes, noPag) {
       noPag
     };
 
-    return sia.getSubjects(search, getState().config.site.url, options).then(res => {
+    return sia.getSubjects(
+      search,
+      { host: getState().config.site.url, eco: 'https://sia-eco.herokuapp.com', id: 'prometeo' },
+      options
+    ).then(res => {
       dispatch(receiveSubjects({ ...res, aPag: noPag }));
     });
   };
@@ -74,7 +78,11 @@ function fetchGroups(code) {
       plan: getState().config.plan.code
     };
 
-    return sia.getGroups(code, getState().config.site.url, options).then(res => {
+    return sia.getGroups(
+      code,
+      { host: getState().config.site.url, eco: 'https://sia-eco.herokuapp.com', id: 'prometeo' },
+      options
+    ).then(res => {
       dispatch(receiveGroups(code, res));
     });
   };

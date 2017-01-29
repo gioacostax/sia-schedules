@@ -53,7 +53,7 @@ const config = {
     })
   ],
 
-  externals: ['node-fetch'],
+  externals: [''],
 
   module: {
     noParse: [],
