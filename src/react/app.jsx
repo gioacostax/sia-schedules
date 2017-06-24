@@ -102,7 +102,7 @@ export default class App extends React.Component {
         <div id="footer">
           <div className="container --centered">
             <div className="info">
-              <a href="https://chrome.google.com/webstore/detail/prometeo-un/bifnfmlgdgmfajhgihjoaedfampmcgee" target="_blank">{'Prometeo UN v2.0.1'}</a>
+              <a href="https://chrome.google.com/webstore/detail/prometeo-un/bifnfmlgdgmfajhgihjoaedfampmcgee" target="_blank">{'Prometeo UN v2.0.2'}</a>
             </div>
             <div className="contact">
               <a href="https://github.com/siajs/prometeo" target="_blank">
@@ -116,10 +116,25 @@ export default class App extends React.Component {
               <span>
                 {'Giorgio Acosta '}
                 <i className="red code icon --bold"></i>
-                <a href="mailto:giacostaj@unal.edu.co">
+                <a href="mailto:giacostaj@unal.edu.co" target="_blank">
                   {' giacostaj@unal.edu.co'}
                 </a>
               </span>
+            </div>
+          </div>
+          <div
+            className="ui compact mini info message --centered"
+            style={{
+              display: 'block',
+              width: 346 + 'px',
+              marginRight: 'auto',
+              marginLeft: 'auto'
+            }}>
+            <div className="header">
+              {'Aplicación Web: '}
+              <a href="https://gioacostax.github.io/prometeo/" target="_blank">
+                {'https://gioacostax.github.io/prometeo/'}
+              </a>
             </div>
           </div>
         </div>
