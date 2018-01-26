@@ -179,7 +179,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.ama ? 'disabled' : ''}
+                ${!this.props.info.url.ama ? 'disabled' : ''}
                 ${this.props.config.site.code === 'ama' ? 'active' : ''}
               `}
               data-value="ama"
@@ -187,7 +187,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.bog ? 'disabled' : ''}
+                ${!this.props.info.url.bog ? 'disabled' : ''}
                 ${this.props.config.site.code === 'bog' ? 'active' : ''}
               `}
               data-value="bog"
@@ -195,7 +195,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.car ? 'disabled' : ''}
+                ${!this.props.info.url.car ? 'disabled' : ''}
                 ${this.props.config.site.code === 'car' ? 'active' : ''}
               `}
               data-value="car"
@@ -203,7 +203,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.man ? 'disabled' : ''}
+                ${!this.props.info.url.man ? 'disabled' : ''}
                 ${this.props.config.site.code === 'man' ? 'active' : ''}
               `}
               data-value="man"
@@ -211,7 +211,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.med ? 'disabled' : ''}
+                ${!this.props.info.url.med ? 'disabled' : ''}
                 ${this.props.config.site.code === 'med' ? 'active' : ''}
               `}
               data-value="med"
@@ -219,7 +219,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.ori ? 'disabled' : ''}
+                ${!this.props.info.url.ori ? 'disabled' : ''}
                 ${this.props.config.site.code === 'ori' ? 'active' : ''}
               `}
               data-value="ori"
@@ -227,7 +227,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.pal ? 'disabled' : ''}
+                ${!this.props.info.url.pal ? 'disabled' : ''}
                 ${this.props.config.site.code === 'pal' ? 'active' : ''}
               `}
               data-value="pal"
@@ -235,7 +235,7 @@ export default class Header extends React.Component {
             <div
               className={`
                 item
-                ${!this.props.info.plan.tum ? 'disabled' : ''}
+                ${!this.props.info.url.tum ? 'disabled' : ''}
                 ${this.props.config.site.code === 'tum' ? 'active' : ''}
               `}
               data-value="tum"
