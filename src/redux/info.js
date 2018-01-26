@@ -25,7 +25,7 @@ function receiveInfo(data) {
 function fetchInfo() {
   return (dispatch, getState) => {
     dispatch({ type: 'FETCH_INFO' });
-    return fetch('https://prometeo-377a2.firebaseio.com/.json').then(res => {
+    return fetch('https://sia-eco.firebaseio.com/sia/.json').then(res => {
       res.json().then(json => {
         if (!json.error) {
           dispatch(receiveInfo(json));
