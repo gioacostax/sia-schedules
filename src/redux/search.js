@@ -62,7 +62,7 @@ function fetchSubjects(search, noRes, noPag) {
 
     return sia.getSubjects(
       search,
-      { host: `http://${getState().config.site.url}`, eco: 'https://sia-eco.herokuapp.com', id: 'prometeo' },
+      { host: `${getState().config.site.url}`, eco: 'https://sia-eco.herokuapp.com', id: 'prometeo' },
       options
     ).then(res => {
       dispatch(receiveSubjects({ ...res, aPag: noPag }));
@@ -80,9 +80,9 @@ function fetchGroups(code) {
 
     return sia.getGroups(
       code,
-      { host: `http://${getState().config.site.url}`, eco: 'https://sia-eco.herokuapp.com', id: 'prometeo' },
+      { host: `${getState().config.site.url}`, eco: 'https://sia-eco.herokuapp.com', id: 'prometeo' },
       options
-    ).then(res => {
+    ).then(res => {      
       dispatch(receiveGroups(code, res));
     });
   };
