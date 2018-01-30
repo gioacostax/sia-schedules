@@ -1,6 +1,6 @@
 {
-  "name": "Prometeo",
-  "version": "2.1.0-beta.1",
+  "name": "PrometeoUN",
+  "version": "2.2.0",
   "description": "Organizador de horarios.",
   "main": "server.js",
   "author": "Giorgio Acosta <giioaj@gmail.com>",

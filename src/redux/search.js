@@ -82,7 +82,7 @@ function fetchGroups(code) {
       code,
       { host: `${getState().config.site.url}`, eco: 'https://sia-eco.herokuapp.com', id: 'prometeo' },
       options
-    ).then(res => {      
+    ).then(res => {
       dispatch(receiveGroups(code, res));
     });
   };
