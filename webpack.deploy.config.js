@@ -11,9 +11,9 @@ const config = {
   },
 
   node: {
-    Buffer: false,
+    Buffer: true,
     global: true,
-    process: false,
+    process: true,
     setImmediate: false
   },
 

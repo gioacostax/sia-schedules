@@ -1,13 +1,13 @@
 {
   "name": "PrometeoUN",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Organizador de horarios.",
   "main": "server.js",
   "author": "Giorgio Acosta <giioaj@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "SET DEBUG=true && node server",
-    "deploy": "SET NODE_ENV=production && webpack -p --config webpack.deploy.config.js --display-reasons"
+    "start": "DEBUG=true && node server",
+    "deploy": "NODE_ENV=production && webpack -p --config webpack.deploy.config.js --display-reasons"
   },
   "dependencies": {
     "babel-core": "^6.7.6",
