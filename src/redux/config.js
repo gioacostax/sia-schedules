@@ -16,7 +16,7 @@ const SET_PLAN = 'prometeo-app/config/SET_PLAN';
 const initialState = {
   site: {
     code: 'bog',
-    url: 'https://siabog1.unal.edu.co',
+    url: 'https://siabog.unal.edu.co',
     name: 'Bogotá'
   },
   plan: {
