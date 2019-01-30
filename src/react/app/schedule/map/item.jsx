@@ -18,9 +18,6 @@ export default props => {
         <div className="color" style={color}></div>
         <div className="detail">
           <div className="name">{`G${props.info.group.code}-${name}`}</div>
-          <div className="place">
-            {`${range > 1 ? utils.validPlace(props.info.group.place) : ''}`}
-          </div>
         </div>
       </div>
     );

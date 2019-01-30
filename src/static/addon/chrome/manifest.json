@@ -1,19 +1,25 @@
 {
-  "name": "Prometeo UN",
-  "short_name": "Prometeo",
-  "description": "Mi Horario - Universidad Nacional",
-  "version": "2.0.1",
   "author": "Giorgio Acosta",
-  "homepage_url": "https://github.com/siajs/prometeo",
-  "permissions": ["http://*.unal.edu.co/*", "https://*.firebaseio.com/*"],
   "background": {
-    "scripts": [ "background.js" ]
+     "scripts": [ "background.js" ]
   },
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_title": "Prometeo UN - Organiza tu Horario"
+     "default_icon": "icon.png",
+     "default_title": "Prometeo UN - Organiza tu Horario"
   },
-  "offline_enabled": false,
+  "description": "Mi Horario - Universidad Nacional",
+  "homepage_url": "https://app.giorgio.work/prometeo/",
+  "icons": { "16": "icon.png", "48": "icon.png", "128": "icon.png" },
+  "manifest_version": 2,
   "minimum_chrome_version": "51.0.0.0",
-  "manifest_version": 2
+  "name": "Prometeo UN",
+  "offline_enabled": false,
+  "permissions": [
+     "http://*.unal.edu.co/*",
+     "https://*.firebaseio.com/*",
+     "https://www.google-analytics.com/"
+  ],
+  "short_name": "Prometeo",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "3.0.0"
 }

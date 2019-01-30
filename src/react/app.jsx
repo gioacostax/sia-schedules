@@ -78,7 +78,7 @@ export default class App extends React.Component {
         <div id="header" className="--bottom-pointing">
           <div className="container --clearfix --centered">
             <div id="logo-name" className="nav-title">
-              <i id="logo" className="hand rock icon"></i><span>{'Prometeo UN'}</span>
+              <span>{'Prometeo UN'}</span>
             </div>
             <Header info={this.props.info.data} />
           </div>
@@ -102,15 +102,7 @@ export default class App extends React.Component {
         <div id="footer">
           <div className="container --centered">
             <div className="info">
-              <a href="https://chrome.google.com/webstore/detail/prometeo-un/bifnfmlgdgmfajhgihjoaedfampmcgee" target="_blank">{'Prometeo UN v2.2.1 (03/02/18)'}</a>
-            </div>
-            <div className="contact">
-              <a href="https://github.com/gioacostax/sia-schedules" target="_blank">
-                <i className="github icon"></i>
-              </a>
-              <a href="https://github.com/gioacostax/sia-schedules/issues" target="_blank">
-                <i className="bug icon"></i>
-              </a>
+              <a href="https://app.giorgio.work/prometeo/" target="_blank">{'Prometeo UN v3.0.0 (1/02/19)'}</a>
             </div>
             <div className="gio">
               <span>

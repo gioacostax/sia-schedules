@@ -60,7 +60,7 @@ const config = {
     loaders: [
       {
         test: /\.(js|jsx)?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         loaders: [
           'react-hot',
           'babel'
@@ -85,9 +85,9 @@ const config = {
   }
 };
 
-config.addVendor('jquery', `${__dirname}/bower_components/jquery/dist/jquery.min.js`);
-config.addVendor('semantic', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.js`);
-config.addVendor('semantic.css', `${__dirname}/bower_components/semantic-ui/dist/semantic.min.css`);
-config.addVendor('canvas', `${__dirname}/bower_components/html2canvas/build/html2canvas.min.js`);
+config.addVendor('jquery', `${__dirname}/src/static/vendors/jquery.min.js`);
+config.addVendor('semantic', `${__dirname}/src/static/vendors/semantic.min.js`);
+config.addVendor('semantic.css', `${__dirname}/src/static/vendors/semantic.min.css`);
+config.addVendor('canvas', `${__dirname}/src/static/vendors/html2canvas.min.js`);
 
 module.exports = config;
