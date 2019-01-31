@@ -17,7 +17,7 @@ const initialState = {
   site: {
     code: 'bog',
     url: 'https://siabog.unal.edu.co',
-    name: 'Bogotá'
+    name: 'BOGOTÁ'
   },
   plan: {
     level: '',
@@ -44,7 +44,7 @@ export function setSite(code, url) {
     site: {
       code,
       url,
-      name: sia.NAME[code]
+      name: sia.HEAD[code]
     }
   };
 }

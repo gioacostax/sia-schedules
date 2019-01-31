@@ -64,7 +64,7 @@ export default class ListSubject extends React.Component {
             className="circle icon"
             style={utils.getColorType(this.props.values.type.toLowerCase())}
           ></i>
-          {utils.ucFirst(sia.TYPE[this.props.values.type.toLowerCase()])}
+          {utils.ucFirst(sia.TYPE[this.props.values.type])}
         </div>
         <div className="td code">{this.props.values.id}</div>
         <div className="td credits">{this.props.values.credits}</div>

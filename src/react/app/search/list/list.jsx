@@ -33,8 +33,7 @@ export default class SearchList extends React.Component {
   }
 
   render = () => {
-    const count = this.props.subjects.data ?
-      this.props.subjects.data.count || Object.keys(this.props.subjects.data.list).length : 0;
+    const count = this.props.subjects.data.count;
 
     return (
       <div id="list" className={this.props.loading || !count ? 'empty' : ''}>

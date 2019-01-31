@@ -1,6 +1,3 @@
-/* Import Dependencies */
-import { sia } from 'src/lib';
-
 /* Actions types */
 /* eslint no-unused-vars: 0 */
 

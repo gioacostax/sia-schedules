@@ -1,6 +1,3 @@
-/* Import Dependencies */
-import { sia } from 'src/lib';
-
 /* Actions types */
 /* eslint no-unused-vars: 0 */
 
@@ -21,7 +18,7 @@ const RESET_SEARCH = 'prometeo-app/search/RESET_SEARCH';
 /* Initial State */
 const initialState = {
   subjects: {
-    data: null /* { list: [], count: 0, pags: 0, aPag: 1 }*/,
+    data: { list: [], count: 0, pags: 0, aPag: 1 },
     search: ''
   },
   groups: [],
@@ -51,40 +48,54 @@ function receiveGroups(code, group) {
 function fetchSubjects(search, noRes, noPag) {
   return (dispatch, getState) => {
     dispatch({ type: 'FETCH_SUBJECTS', search });
-    const options = {
-      filter: getState().search.filters.hour,
-      type: getState().search.filters.type,
-      level: getState().config.plan.level,
-      plan: getState().config.plan.code,
-      noRes,
-      noPag
+    const config = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        url: `${getState().config.site.url}/buscador/JSON-RPC`,
+        query: {
+          keyword: search,
+          filter: getState().search.filters.hour,
+          plan: getState().config.plan.code,
+          level: getState().config.plan.level,
+          type: getState().search.filters.type,
+          noPag,
+          noRes
+        }
+      })
     };
-
-    return sia.getSubjects(
-      search,
-      { host: `${getState().config.site.url}`, eco: 'https://sia-eco.giorgio.work', id: 'prometeo-functions' },
-      options
-    ).then(res => {
-      dispatch(receiveSubjects({ ...res, aPag: noPag }));
-    });
+    return fetch(
+      getState().info.data.url.getSubjects,
+      config
+    ).then(res => res.json().then((json) => {
+      dispatch(receiveSubjects({ ...json.result, aPag: noPag }));
+    }));
   };
 }
+
 
 function fetchGroups(code) {
   return (dispatch, getState) => {
     dispatch({ type: 'FETCH_GROUPS' });
-    const options = {
-      filter: getState().search.filters.hour,
-      plan: getState().config.plan.code
+    const config = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        url: `${getState().config.site.url}/buscador/JSON-RPC`,
+        query: {
+          code,
+          filter: getState().search.filters.hour,
+          plan: getState().config.plan.code
+        }
+      })
     };
 
-    return sia.getGroups(
-      code,
-      { host: `${getState().config.site.url}`, eco: 'https://sia-eco.giorgio.work', id: 'prometeo-functions' },
-      options
-    ).then(res => {
-      dispatch(receiveGroups(code, res));
-    });
+    return fetch(
+      getState().info.data.url.getGroups,
+      config
+    ).then(res => res.json().then((json) => {
+      dispatch(receiveGroups(code, json.result.list));
+    }));
   };
 }
 
@@ -132,6 +143,7 @@ export default function reducer(state = initialState, action) {
     case 'SET_TYPE_FILTER': {
       return {
         ...state,
+        groups: [],
         filters: {
           ...state.filters,
           type: action.typeFilter
@@ -142,6 +154,7 @@ export default function reducer(state = initialState, action) {
     case 'SET_HOUR_FILTER': {
       return {
         ...state,
+        groups: [],
         filters: {
           ...state.filters,
           hour: action.hourFilter
@@ -153,7 +166,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         subjects: {
-          data: null,
+          data: { list: [], count: 0, pags: 0, aPag: 1 },
           search: action.search
         }
       };

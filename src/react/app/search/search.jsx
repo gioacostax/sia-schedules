@@ -156,7 +156,7 @@ export default class Search extends React.Component {
               subjects={{
                 data: {
                   list: this.props.schedule.selected,
-                  countSelected,
+                  count: countSelected,
                   pags: null,
                   aPag: null
                 }

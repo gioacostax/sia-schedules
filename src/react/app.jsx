@@ -60,6 +60,10 @@ export default class App extends React.Component {
     this.setState({ view });
   }
 
+  handleResetStorage = () => {
+    localStorage.clear();
+  }
+
   render = () => {
     return (
       <div>
@@ -102,7 +106,8 @@ export default class App extends React.Component {
         <div id="footer">
           <div className="container --centered">
             <div className="info">
-              <a href="https://app.giorgio.work/prometeo/" target="_blank">{'Prometeo UN v3.0.0 (1/02/19)'}</a>
+              <a href="/" target="_blank">{'Prometeo UN v3.0.0 (1/02/19)'}</a> |
+              <a href="/" onClick={this.handleResetStorage}>{' Borrar Datos'}</a>
             </div>
             <div className="gio">
               <span>
@@ -112,6 +117,10 @@ export default class App extends React.Component {
                   {' giacostaj@unal.edu.co'}
                 </a>
               </span>
+            </div>
+            <div>
+              <a href="https://chrome.google.com/webstore/detail/prometeo-un/bifnfmlgdgmfajhgihjoaedfampmcgee" target="_blank">{'Extensión Chrome'}</a> |
+              <a href="https://app.giorgio.work/prometeo/" target="_blank">{' Aplicación Web'}</a>
             </div>
           </div>
         </div>

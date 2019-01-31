@@ -217,7 +217,7 @@ export default function reducer(state = initialState, action) {
               break;
             }
           }
-          const mapGroup = sia.utils.parseSchedule(action.groups[index].schedule);
+          const mapGroup = sia.utils.parseWeek(action.groups[index].week);
           const valid = utils.validGroup(mapGroup, utils.parseMap(state.map));
 
           if (valid) {
@@ -248,15 +248,14 @@ export default function reducer(state = initialState, action) {
 
       for (let x = 0; x < action.nodes.length; x++) {
         for (let y = 0; y < 7; y++) {
-          if (action.nodes[x].group.schedule[y]) {
-            for (let z = 0; z < action.nodes[x].group.schedule[y].hour.length; z++) {
-              const hours = action.nodes[x].group.schedule[y].hour[z].split('-');
+          if (action.nodes[x].group.week[y]) {
+            for (let z = 0; z < action.nodes[x].group.week[y].length; z++) {
+              const hours = action.nodes[x].group.week[y][z].split('-');
               const info = {
                 ...action.nodes[x],
                 group: {
                   ...action.nodes[x].group,
-                  hour: action.nodes[x].group.schedule[y].hour[z],
-                  place: action.nodes[x].group.schedule[y].place[z]
+                  hour: action.nodes[x].group.week[y][z],
                 }
               };
 
