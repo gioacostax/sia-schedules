@@ -8,7 +8,21 @@ const RECEIVE_INFO = 'prometeo-app/info/RECEIVE_INFO';
 
 /* Initial State */
 const initialState = {
-  data: { plan: {}, url: {} }
+  data: {
+    plan: {},
+    url: {
+      ama: 'https://siaama.unal.edu.co',
+      bog: 'https://siabog.unal.edu.co',
+      car: 'https://siacar.unal.edu.co',
+      getGroups: 'https://us-central1-sia-eco.cloudfunctions.net/getGroups',
+      getSubjects: 'https://us-central1-sia-eco.cloudfunctions.net/getSubjects',
+      man: 'https://siaman.unal.edu.co',
+      med: 'https://siamed.unal.edu.co',
+      ori: 'https://siaori.unal.edu.co',
+      pal: 'https://siapal.unal.edu.co',
+      tum: 'https://siatum.unal.edu.co',
+    }
+  }
 };
 
 /* Private Actions */

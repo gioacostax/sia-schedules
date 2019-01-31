@@ -13,12 +13,13 @@ import { reduxUtils } from 'src/lib';
 /* Import Redux Actions */
 import { loadConfigState } from 'src/redux/config';
 import { getInfo } from 'src/redux/info';
-import { loadScheduleState } from 'src/redux/schedule';
+import { resetSearch } from 'src/redux/search';
+import { loadScheduleState, resetSchedule } from 'src/redux/schedule';
 
 /* --- Redux Optimizer --- */
 
 const states = ['info', 'schedule'];
-const actions = [{ getInfo }, { loadScheduleState }, { loadConfigState }];
+const actions = [{ getInfo }, { loadScheduleState }, { loadConfigState }, { resetSearch }, { resetSchedule }];
 
 @connect(reduxUtils.statesToProps(states), reduxUtils.dispatchToProps(actions))
 
@@ -61,6 +62,8 @@ export default class App extends React.Component {
   }
 
   handleResetStorage = () => {
+    this.props.actions.resetSearch();
+    this.props.actions.resetSchedule();
     localStorage.clear();
   }
 
@@ -106,8 +109,10 @@ export default class App extends React.Component {
         <div id="footer">
           <div className="container --centered">
             <div className="info">
-              <a href="/" target="_blank">{'Prometeo UN v3.0.0 (1/02/19)'}</a> |
-              <a href="/" onClick={this.handleResetStorage}>{' Borrar Datos'}</a>
+              <span>{'Prometeo UN v3.0.0 (1/02/19)'}</span> |
+              <a href={window.location.href} onClick={this.handleResetStorage} style={{ color: '#ec5f61' }}>
+                {' Borrar Datos'}
+              </a>
             </div>
             <div className="gio">
               <span>
